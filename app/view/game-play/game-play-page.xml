@@ -1,0 +1,44 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" 
+navigatingTo="NavigatingTo" class="page"
+actionBarHidden="true">
+    <GridLayout rows="*,auto,*">   
+        <GridLayout row="0" rows="auto, *" class="player-info"  style="rotate: 180;">
+            <GridLayout row="0" columns="auto,*">
+                <Label id="turn-text1" col="0" text="" class="turn-text"></Label>
+                <Label id="turn-time1" col="1" text="{{ 'Time:'+ turnTime }}" class="turn-time"
+                    horizontalAlignment="right" visibility="{{ getMode == 'normal' ? 'collapsed': 'visible' }}">
+                </Label>
+            </GridLayout>
+            <GridLayout row="1" columns="*,*" style="padding-top:10em;">
+                <StackLayout col="0" orientation="horizontal"> 
+                    <Label text="Player 1: " class="score-text"></Label>
+                    <Label text="{{ p1Score }}" class="score-text"></Label>
+                </StackLayout>
+                <StackLayout col="1" orientation="horizontal">
+                    <Label text="Player 2: " class="score-text"></Label>
+                    <Label text="{{ p2Score }}" class="score-text"></Label>
+                </StackLayout>
+            </GridLayout>
+        </GridLayout>
+        <GridLayout row="1" id="board-container" class="board-margin" >
+
+        </GridLayout>
+        <GridLayout row="2" rows="auto, *" class="player-info">
+            <GridLayout row="0" columns="auto,*">
+                <Label id="turn-text2" col="0" text="" class="turn-text"></Label>
+                <Label id="turn-time2" col="1" text="{{ 'Time:'+ turnTime }}" class="turn-time"
+                horizontalAlignment="right" visibility="{{ getMode == 'normal' ? 'collapsed': 'visible' }}"></Label>
+            </GridLayout>
+            <GridLayout row="1" columns="*,*" style="padding-top:10em;">
+                <StackLayout col="0" orientation="horizontal"> 
+                    <Label text="Player 1: " class="score-text"></Label>
+                    <Label text="{{ p1Score }}" class="score-text"></Label>
+                </StackLayout>    
+                <StackLayout col="1" orientation="horizontal">
+                    <Label text="Player 2: " class="score-text"></Label>
+                    <Label text="{{ p2Score }}" class="score-text"></Label>
+                </StackLayout>
+            </GridLayout>
+        </GridLayout>
+    </GridLayout>
+</Page>

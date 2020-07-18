@@ -1,0 +1,10 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" 
+class="page" showModally="onShowModally" 
+actionBarHidden="true">
+    <GridLayout rows="*,*" columns="*,*">
+         <Image row="0" col="0" src="~/images/blue.png"></Image>
+         <Image row="0" col="1" src="~/images/green.png"></Image>
+         <Image row="1" col="0" src="~/images/red.png"></Image>
+         <Image row="1" col="1" src="~/images/orange.png"></Image>
+    </GridLayout>
+</Page>

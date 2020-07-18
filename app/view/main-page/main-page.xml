@@ -1,0 +1,17 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" 
+navigatingTo="onNavigatingTo" class="page"
+actionBarHidden="true" loaded="onPageLoaded">
+    <GridLayout rows="*,*">
+        <StackLayout row="0" class="main-top" orientation="vertical">
+            <Image src="~/images/lines.png" style="margin-top:30em;"></Image>
+        </StackLayout>
+        <StackLayout row="1" class="main-bottom">
+           
+        </StackLayout>
+        <StackLayout row="0" rowSpan="2" orientation="vertical" verticalAlignment="center" 
+            horizontalAlignment="center">
+            <Label tap="Play" text="{{ playtext }}" class="fa play"></Label>
+        </StackLayout> 
+    </GridLayout>
+</Page>
+ 

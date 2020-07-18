@@ -1,0 +1,66 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" 
+navigatingTo="onNavigatingTo" class="page"
+actionBarHidden="true">
+    <GridLayout>
+        <GridLayout id="pick-board" rows="auto,*,auto"> <!-- visibility="collapse"-->
+            <StackLayout row="0" class="mode-title" orientation="vertical"
+                verticalAlignment="center">  
+                <label class="mode-title-text" text="○ Select Board ○" 
+                    horizontalAlignment="center"></label>
+            </StackLayout>
+            <StackLayout row="1" orientation="vertical" verticalAlignment="center"> <!--  row="1" rowSpan="2" rows="auto, auto"-->
+                <StackLayout>
+                    <Image id="btn3x3" src="~/images/3x3.png" width="45%"
+                        class="board" tap="Board3x3Selected"></Image>
+                    <Label text="3x3 Board" horizontalAlignment="center"
+                        class="board-text"></Label>
+                </StackLayout>
+                <StackLayout height="30" />
+                <StackLayout>
+                    <Image id="btn4x4" src="~/images/4x4.png" width="45%"
+                    class="board" tap="Board4x4Selected"></Image>
+                    <Label text="4x4 Board" horizontalAlignment="center"
+                        class="board-text"></Label>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout row="2" horizontalAlignment="right" height="100em">
+                <Button id="btnNext" text="&#xf061;" class="fa back" visibility="collapsed"
+                    touch="BtnNavigationTouch" tap="TapButton"></Button>
+            </StackLayout>
+        </GridLayout>
+        <GridLayout id="pick-color" rows="auto,*,auto" visibility="collapse">
+            <StackLayout row="0" class="mode-title" orientation="vertical"
+                verticalAlignment="center">
+                <label class="mode-title-text" text="○ Select Player Color ○" 
+                    horizontalAlignment="center" style="rotate: 180;"></label>
+            </StackLayout>
+            <StackLayout row="1" orientation="vertical" verticalAlignment="center">
+                <Button id="btn1Ready" text="Ready" class="fa go-button"
+                    touch="BtnNavigationTouch" style="rotate: 180;" tap="ReadyTap"></Button>
+                <StackLayout style="margin-bottom:10em;">
+                    <Label text="Player One" horizontalAlignment="center"
+                        class="pname-text" style="rotate: 180;padding-bottom:5em;" ></Label>
+                    <Image id="btnP1" width="100em" height="100em" btnColor="{{ p1Color }}" 
+                        src="{{ p1ImageUrl }}" tap="ChangeColor"></Image>
+                </StackLayout>
+                <StackLayout style="margin-top:10em;"> 
+                    <Image id="btnP2" width="100em" height="100em" btnColor="{{ p2Color }}" 
+                        src="{{ p2ImageUrl }}" tap="ChangeColor"></Image>
+                    <Label text="Player Two" horizontalAlignment="center"
+                    class="pname-text"></Label>
+                </StackLayout>
+                <Button id="btn2Ready" text="Ready" class="fa go-button"
+                touch="BtnNavigationTouch" tap="ReadyTap"></Button>
+            </StackLayout>
+            <StackLayout row="2" class="mode-title" orientation="vertical"
+                verticalAlignment="center">
+                <label class="mode-title-text" text="○ Select Player Color ○" 
+                    horizontalAlignment="center"></label>
+            </StackLayout> 
+            <StackLayout row="1" orientation="horizontal">
+                <Button id="btnBack" text="&#xf060;" class="fa back"
+                    touch="BtnNavigationTouch" tap="TapButton"></Button>
+            </StackLayout>
+        </GridLayout>
+    </GridLayout>
+</Page>

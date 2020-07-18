@@ -1,0 +1,15 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" 
+navigatingTo="onNavigatingTo" class="page"
+actionBarHidden="true">
+    <GridLayout rows="*,*">
+        <GridLayout row="0" class="main-top">
+            <Button tap="onNormalTap" text="Normal Mode" class="mode-btn blue-color" 
+                width="70%" height="30%">  
+            </Button>
+        </GridLayout>
+        <GridLayout row="1" class="main-bottom">
+            <Button tap="onRushTap" text="Rush Mode" class="mode-btn red-color" width="70%" height="30%">
+            </Button>
+        </GridLayout>  
+    </GridLayout>
+</Page>
